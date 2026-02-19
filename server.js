@@ -16,8 +16,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_VOTRE_CLE');
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY || 'VOTRE_CLE' });
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'pk_test_51T2LGAJRrVNvN9TSGu2IB37Rn1Ib8J65TQ159AM7BGwmAhBQRwoT6dNxPVeY8CTSZzqMmso1XMJx6LNYFCVSn4q000pEM01MTS');
+const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY || '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' });
 
 // ── PAYMENT ──
 app.post('/api/create-payment-intent', async (req, res) => {
