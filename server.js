@@ -10,8 +10,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '.')));
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_VOTRE_CLE');
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY || 'VOTRE_CLE' });
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'pk_test_51T2LGAJRrVNvN9TSGu2IB37Rn1Ib8J65TQ159AM7BGwmAhBQRwoT6dNxPVeY8CTSZzqMmso1XMJx6LNYFCVSn4q000pEM01MTS');
+const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY || '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' });
 
 // ── MONGODB ──
 const MONGO_URI = process.env.MONGO_URI || '';
