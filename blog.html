@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — ViralBoost</title>
+<meta name="description" content="Tips, strategies and insights for creators and entrepreneurs. Grow your audience with ViralBoost."/>
+<meta name="google-site-verification" content="ILdycSKP67wnVjPFXUO7_VZfyD2q9uSMpO1YSpU5DS0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/></noscript>
+<style>
+:root{
+  --bg:#040a05;--bg2:#060e07;--s1:#0b1a0d;--s2:#0f2312;--s3:#142e17;
+  --g1:#15803d;--g2:#16a34a;--g3:#22c55e;--g4:#4ade80;--g5:#86efac;--g6:#bbf7d0;
+  --white:#f0fdf4;--muted:#4a7a58;--muted2:#2d5a3a;
+  --border:rgba(34,197,94,0.15);--border2:rgba(34,197,94,0.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(4,10,5,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border2);padding:0 5%;}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--g3);text-decoration:none;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:13px;color:var(--g5);text-decoration:none;font-weight:500;transition:color 0.2s;}
+.nav-links a:hover{color:var(--white);}
+.nav-cta{background:linear-gradient(135deg,var(--g1),var(--g3));color:var(--bg)!important;padding:8px 18px;border-radius:6px;font-weight:700!important;font-size:12px!important;}
+
+/* HERO */
+.blog-hero{padding:80px 5% 60px;text-align:center;position:relative;overflow:hidden;}
+.blog-hero::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(34,197,94,0.08) 0%,transparent 70%);pointer-events:none;}
+.blog-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--g3);border:1px solid var(--border);padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:20px;}
+.blog-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,90px);letter-spacing:2px;line-height:0.95;color:var(--white);margin-bottom:20px;}
+.blog-hero h1 span{color:var(--g3);}
+.blog-hero p{font-size:16px;color:var(--muted);max-width:480px;margin:0 auto 40px;line-height:1.7;}
+
+/* FEATURED */
+.featured{max-width:1100px;margin:0 auto;padding:0 5% 60px;}
+.featured-card{background:var(--s1);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;transition:border-color 0.3s,transform 0.3s;}
+.featured-card:hover{border-color:rgba(34,197,94,0.4);transform:translateY(-4px);}
+.featured-img{background:linear-gradient(135deg,var(--s2),var(--s3));min-height:300px;display:flex;align-items:center;justify-content:center;font-size:80px;position:relative;overflow:hidden;}
+.featured-img::after{content:'FEATURED';position:absolute;top:16px;left:16px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--g3);border:1px solid var(--border);padding:3px 10px;border-radius:3px;background:rgba(4,10,5,0.8);}
+.featured-content{padding:40px;}
+.article-cat{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--g3);margin-bottom:12px;}
+.featured-content h2{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:1px;line-height:1.05;color:var(--white);margin-bottom:16px;}
+.featured-content p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:24px;}
+.article-meta{display:flex;align-items:center;gap:16px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);}
+.read-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--g1),var(--g3));color:var(--bg);padding:10px 22px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;transition:opacity 0.2s;margin-top:20px;}
+.read-btn:hover{opacity:0.85;}
+
+/* GRID */
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;color:var(--white);margin-bottom:8px;}
+.section-title span{color:var(--g3);}
+.section-sub{font-size:13px;color:var(--muted);margin-bottom:32px;}
+.articles-grid{max-width:1100px;margin:0 auto;padding:0 5% 80px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
+.card{background:var(--s1);border:1.5px solid var(--border2);border-radius:14px;overflow:hidden;transition:border-color 0.3s,transform 0.3s;cursor:pointer;}
+.card:hover{border-color:rgba(34,197,94,0.35);transform:translateY(-4px);}
+.card-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:52px;position:relative;}
+.card-img.green{background:linear-gradient(135deg,#0b1a0d,#142e17);}
+.card-img.blue{background:linear-gradient(135deg,#080b18,#0d1530);}
+.card-img.purple{background:linear-gradient(135deg,#110a1a,#1e0f2e);}
+.card-img.gold{background:linear-gradient(135deg,#130f03,#231a05);}
+.card-img.red{background:linear-gradient(135deg,#130505,#200a0a);}
+.card-body{padding:22px;}
+.card-body h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.5px;color:var(--white);margin-bottom:10px;line-height:1.1;}
+.card-body p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px;}
+.card-footer{display:flex;align-items:center;justify-content:space-between;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);}
+.card-footer a{color:var(--g3);text-decoration:none;font-weight:700;font-size:11px;}
+.card-footer a:hover{color:var(--g4);}
+.badge{display:inline-block;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:1.5px;padding:2px 8px;border-radius:3px;text-transform:uppercase;margin-bottom:10px;}
+.badge.growth{background:rgba(34,197,94,0.1);color:var(--g3);border:1px solid var(--border);}
+.badge.monetize{background:rgba(234,179,8,0.1);color:#fbbf24;border:1px solid rgba(234,179,8,0.2);}
+.badge.strategy{background:rgba(59,130,246,0.1);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);}
+.badge.tiktok{background:rgba(244,63,94,0.1);color:#fb7185;border:1px solid rgba(244,63,94,0.2);}
+.badge.collab{background:rgba(168,85,247,0.1);color:#d8b4fe;border:1px solid rgba(168,85,247,0.2);}
+
+/* NEWSLETTER */
+.newsletter{max-width:1100px;margin:0 auto;padding:0 5% 80px;}
+.newsletter-box{background:var(--s1);border:1.5px solid var(--border);border-radius:16px;padding:48px;text-align:center;position:relative;overflow:hidden;}
+.newsletter-box::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(34,197,94,0.1),transparent);pointer-events:none;}
+.newsletter-box h2{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:2px;color:var(--white);margin-bottom:10px;}
+.newsletter-box p{font-size:14px;color:var(--muted);margin-bottom:28px;}
+.newsletter-form{display:flex;gap:10px;max-width:440px;margin:0 auto;}
+.newsletter-form input{flex:1;padding:12px 16px;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;color:var(--white);outline:none;transition:border-color 0.2s;}
+.newsletter-form input:focus{border-color:var(--g3);}
+.newsletter-form input::placeholder{color:var(--muted2);}
+.newsletter-form button{padding:12px 22px;background:linear-gradient(135deg,var(--g1),var(--g3));border:none;border-radius:8px;font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:700;color:var(--bg);cursor:pointer;white-space:nowrap;transition:opacity 0.2s;}
+.newsletter-form button:hover{opacity:0.85;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border2);padding:24px 5%;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);}
+footer a{color:var(--g3);text-decoration:none;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{animation:fadeUp 0.6s ease both;}
+.delay-1{animation-delay:0.1s;}
+.delay-2{animation-delay:0.2s;}
+.delay-3{animation-delay:0.3s;}
+
+@media(max-width:768px){
+  .featured-card{grid-template-columns:1fr;}
+  .featured-img{min-height:200px;}
+  .newsletter-form{flex-direction:column;}
+  .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">VIRALBOOST</a>
+    <div class="nav-links">
+      <a href="/#showcase">Showcase</a>
+      <a href="/#plans">Pricing</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/#advertise">Advertise</a>
+      <a href="/" class="nav-cta">🚀 Get Started Free</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="blog-tag fade-up">📝 Creator Resources</div>
+  <h1 class="fade-up delay-1">GROW YOUR<br><span>AUDIENCE</span></h1>
+  <p class="fade-up delay-2">Tips, strategies and insights to help creators and entrepreneurs publish smarter and grow faster.</p>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<div class="featured fade-up delay-3">
+  <article class="featured-card">
+    <div class="featured-img">🚀</div>
+    <div class="featured-content">
+      <div class="article-cat">🔥 Growth</div>
+      <h2>How to Publish Your First Ad in 30 Seconds</h2>
+      <p>Getting started on ViralBoost is the easiest way to put your project in front of thousands of creators and entrepreneurs. Here's exactly how to do it step by step.</p>
+      <div class="article-meta">
+        <span>📅 Jan 2025</span>
+        <span>⏱ 3 min read</span>
+        <span>👁 2.4K views</span>
+      </div>
+      <a href="#article-1" class="read-btn">Read Article →</a>
+    </div>
+  </article>
+</div>
+
+<!-- ARTICLES GRID -->
+<div class="articles-grid">
+  <div class="section-title">Latest <span>Articles</span></div>
+  <p class="section-sub">Fresh content every week for creators, founders and entrepreneurs.</p>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-img green">💰</div>
+      <div class="card-body">
+        <span class="badge monetize">Monetize</span>
+        <h3>5 Ways to Make Money with ViralBoost</h3>
+        <p>From affiliate commissions to selling your services — here are 5 proven methods to generate revenue starting today.</p>
+        <div class="card-footer">
+          <span>📅 Jan 2025 · 5 min</span>
+          <a href="#article-2">Read →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-img blue">🤝</div>
+      <div class="card-body">
+        <span class="badge collab">Collab</span>
+        <h3>How to Find the Perfect Collaborator with AI</h3>
+        <p>Our AI matching algorithm analyzes your profile to connect you with the most compatible creators. Here's how to optimize your profile for better matches.</p>
+        <div class="card-footer">
+          <span>📅 Dec 2024 · 4 min</span>
+          <a href="#article-3">Read →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-img red">🎵</div>
+      <div class="card-body">
+        <span class="badge tiktok">TikTok</span>
+        <h3>TikTok vs Instagram in 2025 — Which Platform to Choose?</h3>
+        <p>Both platforms offer massive reach but very different audiences. We break down the pros and cons for creators and what works best for your niche.</p>
+        <div class="card-footer">
+          <span>📅 Dec 2024 · 6 min</span>
+          <a href="#article-4">Read →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-img purple">🎯</div>
+      <div class="card-body">
+        <span class="badge strategy">Strategy</span>
+        <h3>The 90-Day Creator Growth Strategy</h3>
+        <p>A step-by-step 90-day plan to grow your audience from 0 to your first 1,000 followers using ViralBoost's tools and community.</p>
+        <div class="card-footer">
+          <span>📅 Nov 2024 · 8 min</span>
+          <a href="#article-5">Read →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-img gold">📊</div>
+      <div class="card-body">
+        <span class="badge growth">Growth</span>
+        <h3>How to Write an Ad That Gets 3× More Votes</h3>
+        <p>Ads with images get 3× more votes. But the copy matters too. Here's exactly what to write in your title, description and CTA to maximize engagement.</p>
+        <div class="card-footer">
+          <span>📅 Nov 2024 · 4 min</span>
+          <a href="#article-6">Read →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-img green">🤖</div>
+      <div class="card-body">
+        <span class="badge strategy">AI Tools</span>
+        <h3>Using AI Boost to Generate Your Marketing Strategy in 10 Seconds</h3>
+        <p>ViralBoost's AI Boost feature generates a complete promotional strategy for your project in seconds. Here's how to use it effectively.</p>
+        <div class="card-footer">
+          <span>📅 Oct 2024 · 3 min</span>
+          <a href="#article-7">Read →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <div class="newsletter-box">
+    <h2>📩 WEEKLY CREATOR TIPS</h2>
+    <p>Get the best growth strategies delivered to your inbox every week. No spam, unsubscribe anytime.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="your@email.com" aria-label="Email address"/>
+      <button type="button">Subscribe Free →</button>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <p>© 2025 <a href="/">ViralBoost</a> — The creator advertising platform · <a href="/">Back to home</a></p>
+</footer>
+
+<script>
+// Simple intersection observer for fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.card, .featured-card, .newsletter-box').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.3s';
+  observer.observe(el);
+});
+
+// Newsletter button
+document.querySelector('.newsletter-form button').addEventListener('click', function(){
+  const input = document.querySelector('.newsletter-form input');
+  if(input.value && input.value.includes('@')){
+    this.textContent = '✅ Subscribed!';
+    this.style.background = 'linear-gradient(135deg,#15803d,#22c55e)';
+    input.value = '';
+  } else {
+    input.style.borderColor = '#f87171';
+    setTimeout(() => input.style.borderColor = 'var(--border)', 1500);
+  }
+});
+</script>
+
+</body>
+</html>
