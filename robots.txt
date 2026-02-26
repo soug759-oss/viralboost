@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://soug759-oss.github.io/viralboost/sitemap.xml
