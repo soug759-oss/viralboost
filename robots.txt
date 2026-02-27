@@ -1,0 +1,11 @@
+# robots.txt — ViralBoost
+# Allow all search engines to index the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://viralboost.onrender.com/sitemap.xml
+
+# Block access to private/admin paths (add yours here if needed)
+# Disallow: /admin/
